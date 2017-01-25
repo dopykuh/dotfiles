@@ -6,8 +6,11 @@
 HOST='\[\033[1;33m\]@\[\033[1;32m\]\h'
 PROMPT_COMMAND='RET=$?; history -a'
 RETCOLOR='$(if [ $RET != 0 ]; then echo "\e[1;31m"; else echo "\e[1;36m"; fi)'
-export PS1="\[\e[1;31m\]\u$HOST \`if [ \"\w\" != \"~\" ]; then echo -e \
-  '\[\e[1;36m\]\w ';fi\`\[\e[1;31m\]>>\[$RETCOLOR\]>\[\e[0m\] "
+PREPEND="\[\e[1;31m\]\u$HOST \`if [ \"\w\" != \"~\" ]; then echo -e \
+  '\[\e[1;36m\]\w ';fi\`"
+
+APPEND="\[\e[1;31m\]>\[$RETCOLOR\]>\[\e[0m\]"
+export PS1="$PREPEND$APPEND"
 PS2='> '
 PS3='> '
 PS4='+ '
@@ -35,4 +38,8 @@ shopt -s autocd
 shopt -s cmdhist
 shopt -s extglob
 
+GIT_PROMPT_THEME=dopykuh
+
+[[ -f ~/.bash-git-prompt/gitprompt.sh ]] && . ~/.bash-git-prompt/gitprompt.sh
+[[ -f ~/.bash_git.sh ]] && . .bash_git.sh
 [[ -f ~/.bashrc.local ]] && . .bashrc.local

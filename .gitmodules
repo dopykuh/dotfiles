@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/tabline.vim"]
 	path = .vim/bundle/tabline.vim
 	url = https://github.com/mkitt/tabline.vim
+[submodule ".bash-git-prompt"]
+	path = .bash-git-prompt
+	url = https://github.com/magicmonty/bash-git-prompt.git
