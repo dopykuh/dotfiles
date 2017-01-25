@@ -41,5 +41,10 @@ shopt -s extglob
 GIT_PROMPT_THEME=dopykuh
 
 [[ -f ~/.bash-git-prompt/gitprompt.sh ]] && . ~/.bash-git-prompt/gitprompt.sh
+
+if [[ ! -h ~/.bash-git-prompt/themes/dopykuh.bgptheme ]]; then
+  ln -s ~/.dopykuh.bgptheme ~/.bash-git-prompt/themes/dopykuh.bgptheme
+fi
+
 [[ -f ~/.bash_git.sh ]] && . .bash_git.sh
 [[ -f ~/.bashrc.local ]] && . .bashrc.local
