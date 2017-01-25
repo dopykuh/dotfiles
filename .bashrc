@@ -34,3 +34,5 @@ shopt -s checkwinsize
 shopt -s autocd
 shopt -s cmdhist
 shopt -s extglob
+
+[[ -f ~/.bashrc.local ]] && . .bashrc.local
