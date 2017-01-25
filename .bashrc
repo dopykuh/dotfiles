@@ -34,4 +34,3 @@ shopt -s checkwinsize
 shopt -s autocd
 shopt -s cmdhist
 shopt -s extglob
-

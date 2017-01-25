@@ -1,2 +1,2 @@
 . .bashrc
-[[ -f ~/.bashrc.local ]] && .bashrc.local
+[[ -f ~/.bashrc.local ]] && . .bashrc.local
