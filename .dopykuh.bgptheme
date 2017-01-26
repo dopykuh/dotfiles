@@ -1,0 +1,14 @@
+# This is an alternative approach. Single line in git repo.
+override_git_prompt_colors() {
+  GIT_PROMPT_THEME_NAME="dopykuh"
+
+  GIT_PROMPT_COMMAND_OK="${BoldGreen}>${ResetColor}"
+  GIT_PROMPT_COMMAND_FAIL="${BoldRed}>${ResetColor}"
+
+  GIT_PROMPT_START_USER="$PREPEND"
+  GIT_PROMPT_END_USER="${ResetColor} ${APPEND}_LAST_COMMAND_INDICATOR_ "
+  GIT_PROMPT_END_ROOT="${ResetColor} ${APPEND}_LAST_COMMAND_INDICATOR_ "
+}
+
+reload_git_prompt_colors "dopykuh"
+
