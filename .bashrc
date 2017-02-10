@@ -51,6 +51,9 @@ fi
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
+if [[ ! -h ~/.fzf/bin/fzf ]]; then
+  ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
+fi
 if [[ ! "$PATH" == *~/.local_bin* ]]; then
   export PATH="$PATH:~/.local_bin"
 fi
