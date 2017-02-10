@@ -51,6 +51,11 @@ fi
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
+if [[ ! -f ~/.bashrc.local ]]; then
+  echo "[[ -f ~/.bashrc.aliases ]] && . ~/.bashrc.aliases" > ~/.bashrc.local
+  . ~/.bashrc.local
+fi
+
 if [[ ! -h ~/.fzf/bin/fzf ]]; then
   ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
 fi
