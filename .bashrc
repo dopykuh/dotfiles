@@ -50,3 +50,7 @@ fi
 [[ -f ~/.bashrc.local ]] && . .bashrc.local
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
+
+if [[ ! "$PATH" == *~/.local_bin* ]]; then
+  export PATH="$PATH:~/.local_bin"
+fi
