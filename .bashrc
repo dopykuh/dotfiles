@@ -48,3 +48,5 @@ fi
 
 [[ -f ~/.bash_git.sh ]] && . .bash_git.sh
 [[ -f ~/.bashrc.local ]] && . .bashrc.local
+
+[[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
