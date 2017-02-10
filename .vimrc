@@ -34,5 +34,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 let loaded_matchparen = 1
 
+map <C-n> :NERDTreeToggle<CR>
+
 colorscheme hybrid
 
