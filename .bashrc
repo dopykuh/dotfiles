@@ -46,6 +46,10 @@ if [[ ! -h ~/.bash-git-prompt/themes/dopykuh.bgptheme ]]; then
   ln -s ~/.dopykuh.bgptheme ~/.bash-git-prompt/themes/dopykuh.bgptheme
 fi
 
+export GOPATH=~/.go 
+export GOBIN=${GOPATH}/bin 
+export PATH=$PATH:$GOBIN
+
 [[ -f ~/.bash_git.sh ]] && . .bash_git.sh
 [[ -f ~/.bashrc.local ]] && . .bashrc.local
 
