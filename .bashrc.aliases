@@ -19,4 +19,4 @@ alias pgfl='pgrep -fl'
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias gdc='git diff --cached'
 alias gds='git diff --staged'
-
+alias dotfiles='vcsh dotfiles'

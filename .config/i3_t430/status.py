@@ -12,9 +12,9 @@ status.register("temp",
     format="{temp:.0f}°C",)
 
 status.register("battery",
-    format="{status}/{consumption}W {percentage}%",
+        format="{status}/{consumption:.0f}W {percentage:.0f}%",
     alert=True,
-    alert_percentage=5,
+    alert_percentage=20,
     status={
         "DIS": "↓",
         "CHR": "↑",
@@ -22,19 +22,15 @@ status.register("battery",
     },)
 
 status.register("network",
-    interface="eth0",
-    format_up="{v4cidr}",)
-
-status.register("network",
     interface="wlp3s0",
-    format_up="{essid} {quality:03.0f}%",)
+    format_up="{essid} {v4cidr} {quality:.0f}%",)
 
 status.register("disk",
     path="/",
-    format="{used}/{total}G [{avail}G]",)
+    format="{avail}G",)
 
 status.register("pulseaudio",
-    format="♪{volume}",)
+    format="{volume}♪",)
 
 status.register("spotify")
 

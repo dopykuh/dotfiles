@@ -19,3 +19,9 @@
 [submodule ".vim/bundle/ferm.vim"]
 	path = .vim/bundle/ferm.vim
 	url = https://github.com/cometsong/ferm.vim
+[submodule ".fzf"]
+	path = .fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git

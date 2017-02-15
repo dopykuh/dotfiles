@@ -28,11 +28,15 @@ set t_Co=256
 filetype indent plugin on
 execute pathogen#infect()
 
+set rtp+=~/.fzf
+
 let g:powerline_pycmd="py3"
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='wombat'
 let loaded_matchparen = 1
+
+map <C-n> :NERDTreeToggle<CR>
 
 colorscheme hybrid
 

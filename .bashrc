@@ -46,5 +46,23 @@ if [[ ! -h ~/.bash-git-prompt/themes/dopykuh.bgptheme ]]; then
   ln -s ~/.dopykuh.bgptheme ~/.bash-git-prompt/themes/dopykuh.bgptheme
 fi
 
+export GOPATH=~/.go 
+export GOBIN=${GOPATH}/bin 
+export PATH=$PATH:$GOBIN
+
 [[ -f ~/.bash_git.sh ]] && . .bash_git.sh
 [[ -f ~/.bashrc.local ]] && . .bashrc.local
+
+[[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
+
+if [[ ! -f ~/.bashrc.local ]]; then
+  echo "[[ -f ~/.bashrc.aliases ]] && . ~/.bashrc.aliases" > ~/.bashrc.local
+  . ~/.bashrc.local
+fi
+
+if [[ ! -h ~/.fzf/bin/fzf ]]; then
+  ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
+fi
+if [[ ! "$PATH" == *~/.local_bin* ]]; then
+  export PATH="$PATH:~/.local_bin"
+fi
