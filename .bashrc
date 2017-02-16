@@ -60,9 +60,15 @@ if [[ ! -f ~/.bashrc.local ]]; then
   . ~/.bashrc.local
 fi
 
-if [[ ! -h ~/.fzf/bin/fzf ]]; then
-  ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
+if [[ $(uname -m) = "x86_64" ]]; then
+  if [[ ! -h ~/.fzf/bin/fzf ]]; then
+    ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
+  fi
+  if [[ ! "$PATH" == *~/.local_bin* ]]; then
+    export PATH="$PATH:~/.local_bin"
+  fi
 fi
-if [[ ! "$PATH" == *~/.local_bin* ]]; then
-  export PATH="$PATH:~/.local_bin"
-fi
+
+update_fzf() {
+  go get -v -u github.com/junegunn/fzf/src/fzf
+}
