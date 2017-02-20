@@ -1,0 +1,6 @@
+--- /etc/sudoers.d/timmy.sudoers  2017-02-20 19:46:58.741153174 +0100
++++ /home/timmy/.system_patches/etc/sudoers.d/timmy.sudoers.patch 2017-02-20 19:46:18.545573317 +0100
+@@ -0,0 +1,3 @@
++# PATCH FROM timmy_sudoers.patch
++Defaults timestamp_timeout=60
++Defaults !tty_tickets

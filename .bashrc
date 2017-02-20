@@ -52,6 +52,7 @@ export PATH=$PATH:$GOBIN
 
 [[ -f ~/.bash_git.sh ]] && . .bash_git.sh
 [[ -f ~/.bashrc.local ]] && . .bashrc.local
+[[ -f ~/.system_patches/run.sh ]] . ~/.system_patches/run.sh
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
@@ -60,15 +61,10 @@ if [[ ! -f ~/.bashrc.local ]]; then
   . ~/.bashrc.local
 fi
 
-if [[ $(uname -m) = "x86_64" ]]; then
-  if [[ ! -h ~/.fzf/bin/fzf ]]; then
-    ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
-  fi
-  if [[ ! "$PATH" == *~/.local_bin* ]]; then
-    export PATH="$PATH:~/.local_bin"
-  fi
+if [[ ! -h ~/.fzf/bin/fzf ]]; then
+  ln -s ~/.local_bin/fzf ~/.fzf/bin/fzf
+fi
+if [[ ! "$PATH" == *~/.local_bin* ]]; then
+  export PATH="$PATH:~/.local_bin"
 fi
 
-update_fzf() {
-  go get -v -u github.com/junegunn/fzf/src/fzf
-}
