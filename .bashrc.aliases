@@ -27,7 +27,6 @@ SUDO_PACKAGES="apt systemctl"
 
 if [[ $(id -un) != "root" ]]; then
   for i in $SUDO_PACKAGES; do
-    echo $i
     eval "alias ${i}='sudo ${i}'"
   done
 fi
