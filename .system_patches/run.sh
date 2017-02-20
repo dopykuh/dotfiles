@@ -15,3 +15,13 @@ timmy_apply_patches() {
   done
 }
 
+timmy_install_packages() {
+  for i in ~/.system_patches/packages.*; do
+    if [[ -f $i ]]; then
+      local tool=$(echo $i | grep -oP 'packages\.\K.*')
+      while read pkg; do
+        echo "$tool install $pkg"
+      done <<< $(grep -v '^#' $i)
+    fi
+  done
+}
