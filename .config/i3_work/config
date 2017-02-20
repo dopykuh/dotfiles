@@ -140,14 +140,14 @@ bindsym Mod4+0 workspace $w0
 bindsym Mod1+Mod4+Right workspace next
 bindsym Mod1+Mod4+Left workspace prev
 
-workspace $w1 output "HDMI2"
-workspace $w2 output "HDMI2"
-workspace $w3 output "HDMI2"
-workspace $w4 output "HDMI2"
-workspace $w5 output "DP1"
-workspace $w6 output "DP1"
-workspace $w7 output "VGA1"
-workspace $w8 output "VGA1"
+workspace $w1 output "HDMI-2"
+workspace $w2 output "HDMI-2"
+workspace $w3 output "HDMI-2"
+workspace $w4 output "HDMI-2"
+workspace $w5 output "DP-1"
+workspace $w6 output "DP-1"
+workspace $w7 output "VGA-1"
+workspace $w8 output "VGA-1"
 
 # move focused container to workspace
 bindsym Mod4+Shift+1 move container to workspace $w1
