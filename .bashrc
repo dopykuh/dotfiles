@@ -52,7 +52,7 @@ export PATH=$PATH:$GOBIN
 
 [[ -f ~/.bash_git.sh ]] && . ~/.bash_git.sh
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
-[[ -f ~/.system_patches/run.sh ]] . ~/.system_patches/run.sh
+[[ -f ~/.system_patches/run.sh ]] && . ~/.system_patches/run.sh
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
