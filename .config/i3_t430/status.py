@@ -12,7 +12,7 @@ status.register("temp",
     format="{temp:.0f}°C",)
 
 status.register("battery",
-        format="{status}/{consumption:.0f}W {percentage:.0f}%",
+        format="{battery_ident}: {status}/{consumption:.0f}W {percentage:.0f}%",
     alert=True,
     alert_percentage=20,
     status={
