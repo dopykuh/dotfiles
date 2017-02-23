@@ -40,3 +40,6 @@ map <C-n> :NERDTreeToggle<CR>
 
 colorscheme hybrid
 
+if !empty(glob("~/.vimrc.local"))
+  source ~/.vimrc.local
+end
