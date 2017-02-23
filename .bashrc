@@ -48,7 +48,10 @@ fi
 
 export GOPATH=~/.go 
 export GOBIN=${GOPATH}/bin 
-export PATH=$PATH:$GOBIN
+
+GEM_USER_INSTALLATION=$(gem env | grep -oP 'USER INSTALLATION DIRECTORY:\s*\K.*')
+
+export PATH=$PATH:$GOBIN:$GEM_USER_INSTALLATION/bin
 
 [[ -f ~/.bash_git.sh ]] && . ~/.bash_git.sh
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
