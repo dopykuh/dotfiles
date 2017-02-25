@@ -37,3 +37,4 @@
 -y dirmngr
 -y curl
 -y colordiff
+-y fonts-symbola
