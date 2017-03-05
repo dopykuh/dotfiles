@@ -38,8 +38,11 @@ let loaded_matchparen = 1
 
 map <C-n> :NERDTreeToggle<CR>
 
+let g:go_fmt_command = "goimports"
+
 colorscheme hybrid
 
 if !empty(glob("~/.vimrc.local"))
   source ~/.vimrc.local
 end
+
