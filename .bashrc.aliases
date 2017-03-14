@@ -20,6 +20,7 @@ alias gll='git log --graph --pretty=oneline --abbrev-commit'
 alias gdc='git diff --cached'
 alias gds='git diff --staged'
 alias dotfiles='vcsh dotfiles'
+alias ctop='docker run -ti --name ctop --rm -v /var/run/docker.sock:/var/run/docker.sock quay.io/vektorlab/ctop:latest'
 
 [[ -x /usr/bin/colordiff ]] && alias diff='colordiff'
 
