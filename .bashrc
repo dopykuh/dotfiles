@@ -56,6 +56,7 @@ export PATH=$PATH:$GOBIN:$GEM_USER_INSTALLATION/bin
 [[ -f ~/.bash_git.sh ]] && . ~/.bash_git.sh
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
 [[ -f ~/.system_patches/run.sh ]] && . ~/.system_patches/run.sh
+[[ -f /usr/share/bash-completion/bash_completion ]] && . /usr/share/bash-completion/bash_completion
 
 [[ -f ~/.fzf.bash ]] && source ~/.fzf.bash
 
